@@ -59,6 +59,10 @@ nav{
 .geeks:hover img {
     transform: scale(1.5);
 }
+
+.md{
+    padding-left: 20%;
+}
 @media only screen and (max-width: 576px) {
     .containerr{
         
