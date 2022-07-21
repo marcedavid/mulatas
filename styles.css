@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@1,200;1,300&display=swap');
+
+*{
+    margin: 0;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+nav{
+    font-size: 24px;
+}
+.containerr {  
+    
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+}
+
+.cont-prod {  
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . . ."
+      ". . . ."
+      ". . . .";
+}
+  
+.link-underline {
+    border-bottom-width: 0;
+    background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+    background-size: 0 3px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size .5s ease-in-out;
+}
+
+.link-underline-black {
+    background-image: linear-gradient(transparent, transparent), linear-gradient(#C0C2C9, #C0C2C9)
+}
+
+.link-underline:hover {
+    background-size: 100% 3px;
+    background-position: 0 100%
+}
+
+
