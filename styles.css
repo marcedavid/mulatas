@@ -63,9 +63,28 @@ nav{
     background-position: 0 100%
 }
 
+.geeks .btn-buy{
+
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #000000;
+    color: white;
+    font-size: 16px;
+    padding: 5px 40px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.5s ease;
+    opacity: 0;
+}
+
+
 .geeks {
     overflow: hidden;
-
+    position: relative;
 }
 
 .geeks img {
