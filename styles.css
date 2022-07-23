@@ -30,7 +30,7 @@ nav{
 }
 
 .buttons{
-    padding-top: 140%;
+    padding-top: 50px;
 }
 
 .cartbutton{
@@ -81,6 +81,10 @@ nav{
     opacity: 0;
 }
 
+td{
+    padding: 10px;
+    font-size: 18px;
+}
 
 .geeks {
     overflow: hidden;
