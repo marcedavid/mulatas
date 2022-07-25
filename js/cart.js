@@ -1,8 +1,10 @@
 const textCart = document.querySelector('#cart-text');
 const carrito = document.querySelector('#mySidenav');
 const contenedorCarrito = document.querySelector('#list-cart tbody');
-const listProd = document.querySelector('#listProd')
+const listProd = document.querySelector('#listProd');
+const cartCount = document.querySelector('.cart-count');
 let artCart = [];
+let totalCount = 0;
 
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 function openNav() {
@@ -36,6 +38,9 @@ function removeProd(e){
       const prodId = e.target.getAttribute('data-id');
 
       artCart = artCart.filter(prod => prod.id !== prodId);
+        if(prodId){
+          cartCount.textContent = artCart.length
+        }
       carritoHTML();
 
   }
@@ -45,7 +50,7 @@ function removeProd(e){
 function leerDatos(prod){
   const infoProds = {
     imagen: prod.querySelector('img').src,
-    producto: prod.querySelector('p').textContent.trim(),
+    producto: prod.querySelector('p').textContent,
     precio: prod.querySelector('span').textContent,
     id: prod.querySelector('button').getAttribute('data-id'),
     cantidad: 1
@@ -56,13 +61,16 @@ function leerDatos(prod){
                 if(prod.id === infoProds.id){
                     prod.cantidad++;
                     return prod; // RETORNA EL OBJETO ACTUALIZADO
+        
                 }else{
                     return prod;// RETORNA LOS OBJETOS NO DUPLICADOS
+                    
+
                 }
             })
         }else{
             artCart = [...artCart, infoProds];
-            console.log(artCart)
+            cartCount.textContent = artCart.length;
         }
   if( artCart !== 0 ){
     textCart.style.visibility = 'hidden';
