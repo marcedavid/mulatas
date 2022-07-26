@@ -183,4 +183,7 @@ td{
           ". . ";
 
     }
+    .price{
+        padding-left: 0px;
+    }
 }
